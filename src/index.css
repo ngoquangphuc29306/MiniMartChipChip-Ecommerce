@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 45 100% 99%;
+        --foreground: 20 10% 15%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 20 10% 15%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 20 10% 15%;
+
+        --primary: 45 93% 47%;
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 140 60% 90%;
+        --secondary-foreground: 145 80% 25%;
+
+        --muted: 45 20% 96%;
+        --muted-foreground: 25 5% 45%;
+
+        --accent: 45 100% 96%;
+        --accent-foreground: 45 93% 47%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 45 20% 90%;
+        --input: 45 20% 90%;
+        --ring: 45 93% 47%;
+
+        --radius: 1.5rem;
+    }
+
+    .dark {
+        --background: 224 71% 4%;
+        --foreground: 213 31% 91%;
+
+        --card: 224 71% 6%;
+        --card-foreground: 213 31% 91%;
+
+        --popover: 224 71% 6%;
+        --popover-foreground: 213 31% 91%;
+
+        --primary: 45 93% 47%;
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 215 27% 17%;
+        --secondary-foreground: 210 40% 98%;
+
+        --muted: 223 47% 11%;
+        --muted-foreground: 215 20% 65%;
+
+        --accent: 216 34% 17%;
+        --accent-foreground: 210 40% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 216 34% 17%;
+        --input: 216 34% 17%;
+        --ring: 224 76% 48%;
+    }
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    @apply bg-background text-foreground antialiased overflow-x-hidden transition-colors duration-300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Baloo 2', cursive;
+    letter-spacing: 0.01em;
+}
+
+.font-body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.font-display {
+    font-family: 'Baloo 2', cursive;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fbbf24;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d97706;
+}
+
+/* Glass effects */
+.glass {
+    @apply bg-white/80 dark:bg-black/40 backdrop-blur-lg border border-white/50 dark:border-white/10 shadow-lg shadow-yellow-100/20 dark:shadow-none;
+}
+
+.glass-nav {
+    @apply bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg border-b border-white/50 dark:border-slate-800 shadow-sm z-50 transition-all duration-300;
+}
+
+.dark-card {
+    @apply bg-card text-card-foreground border-border dark:shadow-none;
+}
+
+.container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.text-balance {
+    text-wrap: balance;
+}
+
+.btn-hover-effect {
+    @apply transition-all duration-300 active:scale-95 hover:-translate-y-1 hover:shadow-xl;
+}
+
+.shadow-colored {
+    @apply shadow-lg shadow-yellow-400/40 dark:shadow-yellow-600/20;
+}
+
+.gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.animated-element {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .animated-element,
+    .animate-float,
+    .animate-float-delayed {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -20px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+    will-change: transform;
+}
+
+.animate-float-delayed {
+    animation: float 7s ease-in-out 2s infinite;
+    will-change: transform;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+/* Shimmer animation for skeleton loading */
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}

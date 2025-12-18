@@ -1,0 +1,14 @@
+## Pages
+- [- ChipChip Minimart`}](/productdetail): No description available
+- [Admin Dashboard - ChipChip](/account): No description available
+- [Chính sách bảo mật - ChipChip Minimart](/privacypolicy): No description available
+- [Chính sách đổi trả - ChipChip Minimart](/returnpolicy): No description available
+- [Chính sách vận chuyển - ChipChip Minimart](/shippingpolicy): No description available
+- [Đăng ký - Minimart ChipChip](/register): No description available
+- [Đăng nhập - Minimart ChipChip](/login): No description available
+- [Đặt hàng thành công](/cart): No description available
+- [Đặt lại mật khẩu - Minimart ChipChip](/resetpassword): No description available
+- [Hỗ trợ - ChipChip Minimart](/support): No description available
+- [Sản phẩm yêu thích - ChipChip Minimart](/wishlist): No description available
+- [Trung tâm trợ giúp - ChipChip Minimart](/helpcenter): Giải đáp thắc mắc về mua sắm, thanh toán và giao hàng tại ChipChip Minimart.
+- [Về chúng tôi - Minimart ChipChip](/about): Câu chuyện về ChipChip Minimart - Nơi cung cấp thực phẩm tươi sạch và an toàn cho gia đình bạn.
